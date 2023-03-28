@@ -1,0 +1,14 @@
+<!-- <p *ngIf="this.color=='azul'">es azul</p>
+<p *ngIf="this.color!='azul'">no es azul</p> -->
+<div *ngIf="this.color=='azul' then verdadero else falso" >
+
+</div>
+<ng-template #verdadero>
+    <p> le pegaste</p>
+</ng-template>
+<ng-template #falso >
+<p> estoy en el else</p>
+</ng-template>
+<input  type="text" [(ngModel)]="titulo" >
+<input type="text" [(ngModel)]="color" >
+<input type="text" [value]="titulo"  [class]="this.color" >

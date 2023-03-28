@@ -1,0 +1,9 @@
+<div *ngIf="this.numero ==this.adivinar || this.adivinar ==-1">
+    <p *ngIf="this.numero ==this.adivinar">GANASTE!!! </p>
+    <input type="button" (click)="comenzar()" value="Comenzar">
+</div>
+<div *ngIf="this.numero !=this.adivinar  && this.adivinar !=-1">
+    <input type="number" max="50" min="0" maxlength="2" [(ngModel)]="numero"
+    (keyup)="elegido()" >    
+</div>
+    

@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <td>
+            nombre
+        </td>
+        <td>
+            apellido
+        </td>
+        <td>
+            dni
+        </td>
+    </tr>
+    <tr *ngFor="let p of this.personas;let i =index;let par=odd"        
+        >
+        <td [ngClass]="{amarillo:par,rojo:!par}"    >
+            {{i}} -   {{p.nombre}}
+        </td>
+        <td [ngClass]="{amarillo:par,rojo:!par}"    >
+            {{p.apellido}}
+        </td>
+        <td [ngClass]="{amarillo:par,rojo:!par}"    >
+            {{p.dni}}
+        </td>
+    </tr>
+</table>
